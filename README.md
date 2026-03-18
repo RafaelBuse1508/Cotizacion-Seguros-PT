@@ -1,7 +1,15 @@
+* Stack de desarollo
+Composer 2.8.12
+Laravel 11
+php 8.3
+node v24.14.0
+
+
+
 1. Instalar dependencias de Laravel
 composer install
 
-2. Copiar archivo de entorno y generar clave
+2. Copiar .env y generar clave
 cp .env.example .env
 php artisan key:generate
 
@@ -42,7 +50,3 @@ php artisan queue:work
 
 12. Levantar servidor de Laravel
 php artisan serve
-
-13. Limpiar caches opcionales
-php artisan config:cache
-php artisan route:cache

@@ -18,7 +18,7 @@ class ClienteCotizacionSeeder extends Seeder
         for ($i = 1; $i <= 20; $i++) {
             $nombre = $nombres[array_rand($nombres)] . ' ' . $apellidos[array_rand($apellidos)];
             $correo = strtolower(str_replace(' ', '.', $nombre)) . "@example.com";
-            $cedula = str_pad(rand(1, 9999999999), 10, "0", STR_PAD_LEFT); // Cédula de 10 dígitos
+            $cedula = str_pad(rand(1, 9999999999), 10, "0", STR_PAD_LEFT);
 
             $clienteIds[] = DB::table('clientes')->insertGetId([
                 'nombre' => $nombre,
@@ -37,7 +37,7 @@ class ClienteCotizacionSeeder extends Seeder
             'Nissan' => ['Sentra', 'Versa', 'Altima', 'Frontier'],
         ];
 
-        $estados = ['pendiente', 'aprobada', 'rechazada'];
+        $estados = ['pendiente', 'aprobado', 'rechazado'];
 
         foreach ($clienteIds as $clienteId) {
             $numCotizaciones = 1;
